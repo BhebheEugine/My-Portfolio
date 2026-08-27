@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Case-study frameworks for Eugine Bhebhe's selected work." />
+    <title>Case Studies — Eugine Bhebhe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@800;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #07141d;
+        --surface: #0c202c;
+        --ink: #edf8f7;
+        --muted: #a7b9c2;
+        --teal: #4dd9c0;
+        --line: #a6dce036;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          16px/1.6 "DM Sans",
+          sans-serif;
+      }
+      a {
+        color: inherit;
+      }
+      :focus-visible {
+        outline: 2px solid var(--teal);
+        outline-offset: 4px;
+      }
+      .wrap {
+        width: min(980px, calc(100% - 40px));
+        margin: auto;
+      }
+      header {
+        padding: 28px 0 48px;
+        border-bottom: 1px solid var(--line);
+      }
+      .back {
+        color: var(--teal);
+        font-weight: 700;
+        text-underline-offset: 4px;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: Nunito, sans-serif;
+        line-height: 0.95;
+        letter-spacing: -0.05em;
+        text-transform: uppercase;
+      }
+      h1 {
+        max-width: 800px;
+        margin: 45px 0 12px;
+        font-size: clamp(3rem, 9vw, 7rem);
+      }
+      h2 {
+        margin: 0;
+        font-size: clamp(1.7rem, 4vw, 3rem);
+      }
+      h3 {
+        margin: 0 0 12px;
+        font-size: 1rem;
+        letter-spacing: 0.04em;
+        color: var(--teal);
+      }
+      .intro {
+        max-width: 620px;
+        color: var(--muted);
+        font-size: 1.1rem;
+      }
+      nav {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 28px;
+      }
+      nav a {
+        padding: 7px 12px;
+        border: 1px solid var(--line);
+        border-radius: 99px;
+        text-decoration: none;
+      }
+      nav a:hover {
+        border-color: var(--teal);
+        color: var(--teal);
+      }
+      main {
+        padding: 36px 0 80px;
+      }
+      article {
+        padding: 70px 0;
+        border-bottom: 1px solid var(--line);
+        scroll-margin-top: 20px;
+      }
+      .number {
+        color: var(--teal);
+        font-size: 0.75rem;
+        font-weight: 700;
+        letter-spacing: 0.15em;
+      }
+      .summary {
+        max-width: 720px;
+        margin: 18px 0 35px;
+        color: var(--muted);
+        font-size: 1.08rem;
+      }
+      .facts,
+      .sections {
+        display: grid;
+        gap: 16px;
+      }
+      .facts {
+        grid-template-columns: repeat(3, 1fr);
+        margin-bottom: 36px;
+      }
+      .fact,
+      .block {
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: 14px;
+        background: var(--surface);
+      }
+      .fact span {
+        display: block;
+        color: var(--muted);
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+      .fact strong {
+        display: block;
+        margin-top: 4px;
+      }
+      .sections {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .block {
+        min-height: 145px;
+      }
+      .block p {
+        margin: 0;
+        color: var(--muted);
+      }
+      .wide {
+        grid-column: 1/-1;
+      }
+      .note {
+        margin-top: 24px;
+        padding: 14px 17px;
+        border-left: 2px solid var(--teal);
+        color: var(--muted);
+      }
+      footer {
+        padding: 35px 0;
+        color: var(--muted);
+        font-size: 0.9rem;
+      }
+      @media (max-width: 650px) {
+        .facts,
+        .sections {
+          grid-template-columns: 1fr;
+        }
+        .wide {
+          grid-column: auto;
+        }
+        article {
+          padding: 55px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <a class="back" href="index.html#work">← Back to selected work</a>
+        <h1>Case studies</h1>
+        <p class="intro">
+          The engineering decisions, product thinking, and delivery behind Eugine Bhebhe’s selected work.
+        </p>
+        <nav aria-label="Case studies">
+          <a href="#metups">Metups Zimbabwe</a><a href="#mdumeni">MDUMENI</a
+          ><a href="#eloqui">Eloqui</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap">
+      <article id="metups" aria-labelledby="metups-title">
+        <span class="number">01 / CASE STUDY</span>
+        <h2 id="metups-title">Metups Zimbabwe</h2>
+        <p class="summary">
+          A mobile-first second-hand marketplace that brings search, structure, and trust signals to
+          Zimbabwe’s fragmented informal resale economy.
+        </p>
+        <div class="facts">
+          <div class="fact"><span>Role</span><strong>Founder · Solo developer</strong></div>
+          <div class="fact"><span>Stack</span><strong>HTML, CSS, JavaScript, Supabase</strong></div>
+          <div class="fact"><span>Status</span><strong>Live at metups.com</strong></div>
+        </div>
+        <div class="sections">
+          <div class="block">
+            <h3>The problem</h3>
+            <p>
+              Second-hand selling relied on disconnected WhatsApp groups, flea markets, and informal
+              networks—without search, categories, trust signals, or reliable discovery across
+              locations.
+            </p>
+          </div>
+          <div class="block">
+            <h3>The product</h3>
+            <p>
+              Metups lets sellers list in under two minutes and lets buyers search by category,
+              location, and price. In-app messaging and seller verification help establish trust
+              before contact details are exchanged.
+            </p>
+          </div>
+          <div class="block">
+            <h3>Engineering</h3>
+            <p>
+              I built the PWA without framework overhead for low-bandwidth mobile use: fuzzy search
+              using Levenshtein distance and trigrams, SmartSuggest, offline capability, and
+              PersonaEngine ranking.
+            </p>
+          </div>
+          <div class="block">
+            <h3>Systems thinking</h3>
+            <p>
+              The product includes 15+ relational tables, RLS, custom PostgreSQL RPCs, a four-tier
+              admin system, commercial analytics, verification, featured listings, and payment-ready
+              monetisation flows.
+            </p>
+          </div>
+          <div class="block wide">
+            <h3>Outcome</h3>
+            <p>
+              Metups is live in production with the operational, legal, financial, and marketing
+              foundations for a Zimbabwean marketplace. The central lesson: in informal commerce,
+              trust is not a feature—it is the product.
+            </p>
+          </div>
+        </div>
+        <p class="note">
+          Evidence available: PWA and search implementation, Supabase schema/RPCs, custom analytics
+          dashboard, business and legal documentation.
+        </p>
+      </article>
+      <article id="mdumeni" aria-labelledby="mdumeni-title">
+        <span class="number">02 / CASE STUDY</span>
+        <h2 id="mdumeni-title">MDUMENI AI Agronomist</h2>
+        <p class="summary">
+          An AI-powered crop-advisory and market-intelligence application for Zimbabwean smallholder
+          farmers, developed through the University of Zimbabwe’s INTELLI-Farming initiative.
+        </p>
+        <div class="facts">
+          <div class="fact"><span>Role</span><strong>Lead developer · Team of 5</strong></div>
+          <div class="fact"><span>Stack</span><strong>React Native, FastAPI, Supabase</strong></div>
+          <div class="fact"><span>Status</span><strong>Deployed and active</strong></div>
+        </div>
+        <div class="sections">
+          <div class="block">
+            <h3>The problem</h3>
+            <p>
+              Smallholder farmers often lack timely access to agronomists, disease diagnosis,
+              planting guidance, and market information. Poor decisions can directly damage yields
+              and livelihoods.
+            </p>
+          </div>
+          <div class="block">
+            <h3>The product</h3>
+            <p>
+              MDUMENI puts crop guidance, disease information, regional calendars, and market data
+              in a farmer’s pocket. Its name means advisor or counsellor in Ndebele.
+            </p>
+          </div>
+          <div class="block">
+            <h3>Engineering</h3>
+            <p>
+              I led the React Native and FastAPI architecture, implementing clean layers, a 60-crop
+              advisory model, offline-first crop information, and a four-tab market experience.
+            </p>
+          </div>
+          <div class="block">
+            <h3>Critical delivery</h3>
+            <p>
+              I diagnosed duplicate routes, mismatched crop IDs, exposed personal defaults, and
+              unlinked duplicate modules; then delivered marketplace CRUD, RLS-backed tables, and a
+              10-document technical suite.
+            </p>
+          </div>
+          <div class="block wide">
+            <h3>Outcome</h3>
+            <p>
+              The deployed system serves 60 crop profiles and includes Pfumvudza basin calculations
+              for 13 crops across Zimbabwe’s Regions 4 and 5—combining cultivation and market
+              decisions in one tool.
+            </p>
+          </div>
+        </div>
+        <p class="note">
+          Evidence available: API architecture, marketplace schema, mobile screen flow, Pfumvudza
+          calculation reference, and technical documentation.
+        </p>
+      </article>
+      <article id="eloqui" aria-labelledby="eloqui-title">
+        <span class="number">03 / CASE STUDY</span>
+        <h2 id="eloqui-title">Eloqui Android Tutor</h2>
+        <p class="summary">
+          A personal, offline-first Android vocabulary tutor built to make deliberate English
+          learning more useful than passive or overly gamified alternatives.
+        </p>
+        <div class="facts">
+          <div class="fact"><span>Role</span><strong>Solo developer</strong></div>
+          <div class="fact"><span>Stack</span><strong>Kotlin, Compose, Room, MVVM</strong></div>
+          <div class="fact"><span>Status</span><strong>Built, signed, personal use</strong></div>
+        </div>
+        <div class="sections">
+          <div class="block">
+            <h3>The problem</h3>
+            <p>
+              I wanted words in context, adaptive review, useful AI explanations, timely
+              notifications, offline use, and freedom to choose AI providers—without a
+              subscription-driven learning experience.
+            </p>
+          </div>
+          <div class="block">
+            <h3>The product</h3>
+            <p>
+              Eloqui combines a daily word queue, contextual explanations, spaced-repetition
+              quizzes, learning statistics, and configurable notifications in a native Android
+              experience.
+            </p>
+          </div>
+          <div class="block">
+            <h3>Engineering</h3>
+            <p>
+              I built 10+ Jetpack Compose screens on an MVVM and clean-architecture foundation. Room
+              is the primary store, making the app fully usable without a connection.
+            </p>
+          </div>
+          <div class="block">
+            <h3>Design for change</h3>
+            <p>
+              The AIProvider interface gives Gemini, Claude, and Grok equivalent roles behind one
+              contract. WorkManager schedules review prompts around realistic availability windows.
+            </p>
+          </div>
+          <div class="block wide">
+            <h3>Outcome</h3>
+            <p>
+              Eloqui is a signed app I use personally. It demonstrates that I apply
+              production-minded architecture—replaceable dependencies, local data integrity, and
+              background-work constraints—even when no client requires it.
+            </p>
+          </div>
+        </div>
+        <p class="note">
+          Evidence available: MVVM/Room architecture, AIProvider interface, Compose screen
+          hierarchy, and notification scheduling logic.
+        </p>
+      </article>
+    </main>
+    <footer class="wrap">© Eugine Bhebhe · Selected case studies</footer>
+  </body>
+</html>
